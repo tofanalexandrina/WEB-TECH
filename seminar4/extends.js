@@ -9,5 +9,19 @@ class Student{
     }
 }
 
+
+class Teacher extends Student{
+    constructor(name, age, grade, subject){
+        super(name, age, grade);
+        this.subject=subject;
+    }
+    teach(){
+        console.log(`I teach ${this.subject}`);
+    }
+}
+
 const student=new Student(`Alexandrina`, 20, 3);
+const teacher=new Teacher(`Mihai`, 30, 3, 'Web Tech');
+
 console.log(student);
+console.log(teacher);
